@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture Maker | PicsFont</title>
+    <meta name="description" content="Create professional profile pictures for Instagram, TikTok and Facebook with custom borders and backgrounds.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="container">
+            <div class="logo">Pics<span>Font</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="index.html" class="btn btn-outline">Font Generator</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pfp-maker-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h1>Profile Picture Maker</h1>
+                    <p>Create a stunning profile picture with custom backgrounds and borders.</p>
+                </div>
+                
+                <div class="pfp-container">
+                    <div class="pfp-editor">
+                        <div class="upload-area" id="pfp-upload-zone">
+                            <input type="file" id="pfp-input" accept="image/*" hidden>
+                            <div class="upload-placeholder">
+                                <span class="upload-icon">📸</span>
+                                <p>Click to upload photo</p>
+                                <button class="btn btn-primary" onclick="document.getElementById('pfp-input').click()">Select Photo</button>
+                            </div>
+                        </div>
+
+                        <div class="pfp-controls hidden" id="pfp-controls">
+                            <div class="control-group">
+                                <label>Background Color</label>
+                                <div class="color-presets" id="bg-presets">
+                                    <button class="color-swatch active" style="background: #ffffff;" data-color="#ffffff"></button>
+                                    <button class="color-swatch" style="background: #f3f4f6;" data-color="#f3f4f6"></button>
+                                    <button class="color-swatch" style="background: #e5e7eb;" data-color="#e5e7eb"></button>
+                                    <button class="color-swatch" style="background: #000000;" data-color="#000000"></button>
+                                    <input type="color" id="pfp-bg-custom" value="#ffffff">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label>Border Color</label>
+                                <div class="color-presets" id="border-presets">
+                                    <button class="color-swatch active" style="background: #6d28d9;" data-color="#6d28d9"></button>
+                                    <button class="color-swatch" style="background: #ef4444;" data-color="#ef4444"></button>
+                                    <button class="color-swatch" style="background: #10b981;" data-color="#10b981"></button>
+                                    <input type="color" id="pfp-border-custom" value="#6d28d9">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label>Border Width</label>
+                                <input type="range" id="pfp-border-width" min="0" max="40" value="10">
+                            </div>
+
+                            <button id="pfp-download" class="btn btn-primary w-full">Download PFP</button>
+                        </div>
+                    </div>
+
+                    <div class="pfp-preview-container">
+                        <div class="preview-circle" id="preview-wrapper">
+                            <img id="pfp-preview-img" src="" alt="Preview" class="hidden">
+                        </div>
+                        <p class="preview-label">Live Preview</p>
+                    </div>
+                </div>
+
+                <!-- Adsense & Backlinks -->
+                <div class="adsense-placeholder" style="margin-top: 4rem;">
+                    <div class="ads-box">Google Adsense Area</div>
+                </div>
+
+                <div class="backlinks-area">
+                    <h3>Partners & Resources</h3>
+                    <div class="backlinks-grid">
+                        <a href="#" class="backlink-item">Cool Symbols</a>
+                        <a href="#" class="backlink-item">Text Art Pro</a>
+                        <a href="#" class="backlink-item">Bio Ideas</a>
+                        <!-- Add more backlinks here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2026 PicsFont.</p></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

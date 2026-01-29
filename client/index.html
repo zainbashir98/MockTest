@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Generator & Profile Picture Maker | Fancy Text & PFP Creator</title>
+    <meta name="description" content="Free online Font Generator and Profile Picture Maker. Create stylish fancy text for Instagram and professional circular profile pictures for TikTok and Facebook. Optimized for SEO and Google Adsense.">
+    <meta name="keywords" content="font generator, fancy text, pfp maker, profile picture creator, instagram fonts, tiktok fonts, stylish text">
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <meta property="og:title" content="Font Generator & Profile Picture Maker">
+    <meta property="og:description" content="Create stunning fonts and professional profile pictures in seconds.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Pics<span>Font</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#pfp-maker" class="btn btn-outline">PFP Maker</a>
+                <a href="#generator" class="btn btn-primary">Try Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="home-hero">
+            <div class="container hero-flex">
+                <div class="hero-content">
+                    <span class="badge">#1 Social Media Tool</span>
+                    <h1>Elevate Your Social Media Presence</h1>
+                    <p>Generate stunning fonts and create professional profile pictures in seconds. Stand out on Instagram, TikTok, and Twitter.</p>
+                </div>
+                <div class="hero-visual">
+                    <img src="assets/hero-image.jpg" alt="Social Media Branding" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Adsense Top -->
+        <div class="container adsense-placeholder">
+            <div class="ads-label">Advertisement</div>
+            <div class="ads-box">Google Adsense Area</div>
+        </div>
+
+        <div id="generator" class="app-wrapper container">
+            <aside class="sidebar">
+                <div class="sidebar-header">Select a font style</div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">✨ All</button>
+                    <button class="filter-btn" data-filter="cool">🪄 Cool</button>
+                    <button class="filter-btn" data-filter="fancy">💎 Fancy</button>
+                    <button class="filter-btn" data-filter="cursive">🖋️ Cursive</button>
+                    <button class="filter-btn" data-filter="small">Aa Small</button>
+                    <button class="filter-btn" data-filter="bold">B Bold</button>
+                    <button class="filter-btn" data-filter="glitch">⚡ Glitch</button>
+                    <button class="filter-btn" data-filter="symbols">⭐ Symbols</button>
+                    <button class="filter-btn" data-filter="emojis">😀 Emojis</button>
+                </div>
+            </aside>
+
+            <div class="main-content">
+                <div class="input-card">
+                    <div class="input-inner">
+                        <input type="text" id="text-input" placeholder="Add text here to get started...">
+                    </div>
+                </div>
+                
+                <div class="adsense-placeholder">
+                    <div class="ads-box">Google Adsense Middle</div>
+                </div>
+
+                <div id="results-grid" class="results-list"></div>
+            </div>
+        </div>
+
+        <!-- PFP Maker Section (Picsart Inspired) -->
+        <section id="pfp-maker" class="pfp-maker-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Profile Picture Maker</h2>
+                    <p>Create a professional-looking profile picture with custom borders and backgrounds.</p>
+                </div>
+                
+                <div class="pfp-layout">
+                    <div class="pfp-preview-area">
+                        <div class="preview-circle-wrapper" id="pfp-wrapper">
+                            <img id="pfp-preview-img" src="" alt="Preview" class="hidden">
+                        </div>
+                    </div>
+
+                    <div class="pfp-editor-panel">
+                        <div class="panel-header">
+                            <h3>Edit your profile pic</h3>
+                        </div>
+
+                        <div class="upload-zone" id="pfp-upload-zone">
+                            <input type="file" id="pfp-input" accept="image/*" hidden>
+                            <button class="btn btn-primary" onclick="document.getElementById('pfp-input').click()">Select Photo</button>
+                        </div>
+
+                        <div id="pfp-controls" class="hidden">
+                            <div class="control-tabs">
+                                <button class="tab active">Color</button>
+                                <button class="tab">Border</button>
+                            </div>
+
+                            <div class="control-group">
+                                <label>SOLID COLOR</label>
+                                <div class="color-grid" id="bg-presets">
+                                    <button class="color-circle" style="background: #ffffff;" data-color="#ffffff"></button>
+                                    <button class="color-circle" style="background: #000000;" data-color="#000000"></button>
+                                    <button class="color-circle" style="background: #ef4444;" data-color="#ef4444"></button>
+                                    <button class="color-circle" style="background: #3b82f6;" data-color="#3b82f6"></button>
+                                    <button class="color-circle" style="background: #10b981;" data-color="#10b981"></button>
+                                    <button class="color-circle" style="background: #f59e0b;" data-color="#f59e0b"></button>
+                                    <input type="color" id="pfp-bg-custom" class="custom-color-input">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label>BORDER COLOR</label>
+                                <div class="color-grid" id="border-presets">
+                                    <button class="color-circle active" style="background: #6d28d9;" data-color="#6d28d9"></button>
+                                    <button class="color-circle" style="background: #ff00ff;" data-color="#ff00ff"></button>
+                                    <button class="color-circle" style="background: #00ffff;" data-color="#00ffff"></button>
+                                    <input type="color" id="pfp-border-custom" class="custom-color-input">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label>BORDER WIDTH</label>
+                                <input type="range" id="pfp-border-width" min="0" max="40" value="10" class="range-input">
+                            </div>
+
+                            <button id="pfp-download" class="btn btn-primary w-full" style="margin-top: 2rem;">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adsense Bottom -->
+        <div class="container adsense-placeholder">
+            <div class="ads-box">Google Adsense Bottom</div>
+        </div>
+
+        <!-- Featured Articles & Partners -->
+        <section class="guest-post-section container">
+            <div class="backlinks-area">
+                <h2>Featured Articles & Partners</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <span class="badge">Guest Post</span>
+                        <h3>Mastering Instagram 2026</h3>
+                        <p>Latest strategies for viral growth on Instagram.</p>
+                        <a href="#" class="btn btn-outline w-full">Read</a>
+                    </div>
+                    <div class="blog-card">
+                        <span class="badge">Partner Link</span>
+                        <h3>Design Tools</h3>
+                        <p>Essential tools for modern social media creators.</p>
+                        <a href="#" class="btn btn-outline w-full">Visit</a>
+                    </div>
+                    <div class="blog-card">
+                        <span class="badge">Growth</span>
+                        <h3>TikTok Trends</h3>
+                        <p>Understanding the next wave of short-form video.</p>
+                        <a href="#" class="btn btn-outline w-full">Read</a>
+                    </div>
+                    <div class="blog-card">
+                        <span class="badge">Resource</span>
+                        <h3>Color Theory</h3>
+                        <p>How colors affect your branding and engagement.</p>
+                        <a href="#" class="btn btn-outline w-full">Read</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo">Pics<span>Font</span></div>
+                <p>The ultimate toolkit for social media content creators.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 PicsFont. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
